@@ -33,13 +33,12 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 50px;
     filter: invert(1);
+    margin-left: 10px;
 }
 
 .header__menu {
-    width: 33%;
-    min-width: 30%;
     display: none;
     justify-content: space-between;
 }
@@ -50,26 +49,117 @@ body {
     color: #fff;
     letter-spacing: 2px;
 }
-
+.minicontainer {
+    display: flex;
+}
 .search {
-    max-width: 50px;
+    max-width: 35px;
+    margin-right: 15px;
     filter: invert(1);
+}
+.ham {
+    filter: invert(1);
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.socialicon {
+    max-width: 25px;
+    margin-bottom: 5px;
+    filter: invert(1);
+}
+p.righttext {
+    color: #ffffff;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+}
+.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+.righttext {
+    margin-right: 15px;
+}
+.container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vl {
+    border-left: 2px solid #ffffff;
+    height: 100px;
+}
+.numbers {
+    color: #ffffff;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bicycle {
+    max-width: 70%;
+}
+.container4 {
+    font-size: 0.8rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 70%;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+}
+p1 {
+    text-transform: uppercase;
+}
+p3 {
+    font-weight: bold;
 }
 
 
 @media (min-width: 768px) {
     .header__menu {
         display: flex;
+        width: 600px;
+    }
+    .header__menu a {
+        padding: 10px;
     }
 
     .ham {
         display: none;
     }
+    .logo {
+        max-width: 100px;
+    }
+    .search {
+        max-width: 50px;
+    }
+    .footer {
+        flex-wrap: nowrap;
+    }
+    .container3 {
+        flex-direction: row;
+        align-items: center;
+    }
+    .vl {
+        border-left: 2px solid #ffffff;
+        width: 100px;
+    }
+    .footer__container {
+        max-width: 1440px;
+        width: 100%;
+    }
+    .bicycle {
+        max-height: 30vh;
+    }
 }
 
 @media (min-width: 1024px) {
     .container {
-        width: 1220px;
+
     }
 
 }
