@@ -1,68 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-    background-image: url("../img/para.jpg");
+    font-family: 'Open Sans', sans-serif;
+    background: url("../img/adventure.jpg") no-repeat 50% fixed;
     background-size: cover;
-    font-family: sans-serif;
+    font-size: 16px;
 }
-.login-wrapper {
-
-    height: 323px;
-    width: 349px;
+.header__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-
+    padding: 10px;
+    max-width: 1440px;
 }
-.form {
-    position: center;
 
-    max-width: 323px;
-    padding: 80px 40px 40px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
+.logo {
+    max-width: 100px;
+    filter: invert(1);
 }
-.form h2 {
+.header__menu {
+    width: 33%;
+    min-width: 30%;
+    display: none;
+    justify-content: space-between;
+}
+.header__menu a {
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.search {
+    max-width: 50px;
+    filter: invert(1);
 }
 
-.form .input-group {
-    position: relative;
+
+
+@media (min-width: 376px) {
+    .header__menu {
+        display: flex;
+    }
+    .ham {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
 
 }
-.form .input-group input {
-    width: 100%;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin-top: 10px;
+
+@media (min-width: 1200px) {
 
 }
-.form .input-group label {
-    position: absolute;
-    margin-top: 10px;
-    top: 0;
-    left: 0;
-    font-size: 1rem;
-    pointer-events: none;
-}
-.submit-btn {
-    display: block;
-    margin-left: auto;
-    border: none;
-    outline: none;
-    background: #262626;
-    font-size: 1rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
