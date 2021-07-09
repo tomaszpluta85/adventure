@@ -180,13 +180,19 @@ p3 {
     .footer__image {
         background-image: url('../img/bicycle.jpg');
         background-size: cover;
-
     }
-    .footer__arrow {
-        background-image: url("../img/arrowleft.svg");
-        background-image: url("../img/arrowright.svg");
+
+    .arrows {
         filter: invert(1);
-        background-size: 30px;
+        width: 30px;
+        display: flex;
+        float: right;
+        margin-right: 60px;
+        margin-top: 30px;
+        box
+    }
+    .footer__arrow-left {
+
     }
     .socialicon {
         margin-bottom: 50px;
