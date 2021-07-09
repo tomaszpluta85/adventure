@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="full-width full-height">
@@ -24,9 +26,8 @@
                 <div><a href="#">Contact</a></div>
             </div>
             <div class="minicontainer">
-                <div>
-                    <img src="img/search.png" alt="" class="search">
-                </div>
+
+
                 <div class="ham">
                     <img src="img/hamburger.svg" alt="">
                 </div>
@@ -70,5 +71,18 @@
         </footer>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        // let zmienna = 12;
+        // console.log('dupa');
+        // console.log(zmienna);
+        $('.footer__number').click(function(){
+            $(".footer__number--active").removeClass ("footer__number--active");
+            console.log($(this));
+            $(this).addClass('footer__number--active')
+        })
+    });
+
+</script>
 </body>
 </html>

@@ -57,11 +57,8 @@ body {
 .minicontainer {
     display: flex;
 }
-.search {
-    max-width: 35px;
-    filter: invert(1);
-    margin-right: 10px;
-}
+
+
 .ham {
     filter: invert(1);
 }
