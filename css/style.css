@@ -60,6 +60,7 @@ body {
 .search {
     max-width: 35px;
     filter: invert(1);
+    margin-right: 10px;
 }
 .ham {
     filter: invert(1);
@@ -67,10 +68,10 @@ body {
 .social {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .socialicon {
     max-width: 25px;
-    margin-bottom: 5px;
     filter: invert(1);
 }
 p.righttext {
