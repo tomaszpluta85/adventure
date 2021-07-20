@@ -7,10 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
+
+<div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__navbar">
+        <a class="mobile-menu__link" href="#">Home</a>
+        <a class="mobile-menu__link" href="#">Vehicles</a>
+        <a class="mobile-menu__link" href="#">About</a>
+        <a class="mobile-menu__link" href="#">Contact</a>
+    </nav>
+
+    <button class="mobile-menu__close" id="closeMobileMenu">
+        <!-- todo: po kliknięciu tego przycisku, powinno usuną klasę "mobile-menu--active" z menu mobilnego -->
+        <!-- todo: icon SVG-->
+        zamknij
+    </button>
+</div>
+
 <div class="full-width full-height">
     <div class="container">
         <div class="header__container">
@@ -25,22 +42,13 @@
                 <div><a href="#">About</a></div>
                 <div><a href="#">Contact</a></div>
             </div>
-            <div class="header__hammenu">
-                <div class="hammenu__container">
-                    <nav class="hammenu__navbar">
-                        <a class="navbar__link" href="#">Home</a>
-                        <a class="navbar__link" href="#">Vehicles</a>
-                        <a class="navbar__link" href="#">About</a>
-                        <a class="navbar__link" href="#">Contact</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="minicontainer">
-                <div class="ham">
-                    <div class="ham__line line1"></div>
-                    <div class="ham__line line2"></div>
-                    <div class="ham__line line3"></div>
-                </div>
+
+            <div class="header__mobile-menu">
+                <button class="header__mobile-button" id="openMobileMenu">
+                    <!-- todo: po kliknięciu tego przycisku, powinno doda klasę "mobile-menu--active" do menu mobilnego -->
+                    <!-- todo: icon SVG-->
+                    otwórz
+                </button>
             </div>
         </div>
     </div>
@@ -82,12 +90,12 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // let zmienna = 12;
         // console.log('dupa');
         // console.log(zmienna);
-        $('.footer__number').click(function(){
-            $(".footer__number--active").removeClass ("footer__number--active");
+        $('.footer__number').click(function () {
+            $(".footer__number--active").removeClass("footer__number--active");
             console.log($(this));
             $(this).addClass('footer__number--active')
         })
@@ -95,10 +103,10 @@
         const menuIcon = document.querySelector('.ham');
         const hammenu__navbar = document.querySelector('.ham');
 
-        menuIcon.addEventListener('click', () => {
+        menuIcon.addEventListener('click', () = > {
             hammenu__navbar.classList.toggle("change");
-    });
-
+    })
+        ;
 
 
     });
