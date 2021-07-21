@@ -22,9 +22,9 @@
     </nav>
 
     <button class="mobile-menu__close" id="closeMobileMenu">
+        <img src="img/x.svg" alt="" class="x_icon">
         <!-- todo: po kliknięciu tego przycisku, powinno usuną klasę "mobile-menu--active" z menu mobilnego -->
         <!-- todo: icon SVG-->
-        zamknij
     </button>
 </div>
 
@@ -45,9 +45,9 @@
 
             <div class="header__mobile-menu">
                 <button class="header__mobile-button" id="openMobileMenu">
+                    <img src="img/hamburger.svg" class="hamburger_icon" alt="">
                     <!-- todo: po kliknięciu tego przycisku, powinno doda klasę "mobile-menu--active" do menu mobilnego -->
                     <!-- todo: icon SVG-->
-                    otwórz
                 </button>
             </div>
         </div>
@@ -67,18 +67,44 @@
     <div class="container footer__container">
         <footer class="footer">
             <div class="footer__numbers footer__inner">
-                <div class="footer__number footer__number--active">01</div>
-                <div class="footer__number">02</div>
-                <div class="footer__number">03</div>
-                <div class="footer__number">04</div>
+                <div class="footer__number footer__number--active" data-content-id="1">01</div>
+                <div class="footer__number" data-content-id="2">02</div>
+                <div class="footer__number" data-content-id="3">03</div>
+                <div class="footer__number" data-content-id="4">04</div>
             </div>
-            <div class="footer__description footer__inner">
-                <p1>the trail of your life</p1>
-                <p2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem, consequatur, distinctio
+            <div class="description__container">
+                <div class="footer__description footer__description--active footer__inner">
+                    <p1>the trail of your life</p1>
+                    <p2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem, consequatur, distinctio
                     ipsa iure labore laboriosam mollitia nemo quam quia repellat, sint temporibus! A corporis cupiditate
                     eligendi numquam. Voluptatem?
-                </p2>
-                <p3>Learn more ></p3>
+                    </p2>
+                    <p3>Learn more ></p3>
+                </div>
+                <div class="footer__description footer__inner">
+                    <p1>the wild wild west</p1>
+                    <p2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem, consequatur, distinctio
+                        ipsa iure labore laboriosam mollitia nemo quam quia repellat, sint temporibus! A corporis cupiditate
+                        eligendi numquam. Voluptatem?
+                    </p2>
+                    <p3>Learn more ></p3>
+                </div>
+                <div class="footer__description footer__inner">
+                    <p1>looking for an adventure?</p1>
+                    <p2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem, consequatur, distinctio
+                        ipsa iure labore laboriosam mollitia nemo quam quia repellat, sint temporibus! A corporis cupiditate
+                        eligendi numquam. Voluptatem?
+                    </p2>
+                    <p3>Learn more ></p3>
+                </div>
+                <div class="footer__description footer__inner">
+                    <p1>Join Us!</p1>
+                    <p2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam autem, consequatur, distinctio
+                        ipsa iure labore laboriosam mollitia nemo quam quia repellat, sint temporibus! A corporis cupiditate
+                        eligendi numquam. Voluptatem?
+                    </p2>
+                    <p3>Learn more ></p3>
+                </div>
             </div>
             <div class="footer__image footer__inner">
                 <div class="arrows">
@@ -94,19 +120,29 @@
         // let zmienna = 12;
         // console.log('dupa');
         // console.log(zmienna);
-        $('.footer__number').click(function () {
+
+
+        function clickOnNumberButton() {
             $(".footer__number--active").removeClass("footer__number--active");
-            console.log($(this));
+
+            const contentId = $(this).data();
+
             $(this).addClass('footer__number--active')
+            console.log(contentId)
+        }
+
+        $('.footer__number').on('click', clickOnNumberButton);
+
+        $('#openMobileMenu').click(function () {
+            $("#mobileMenu").addClass("mobile-menu--active");
+            console.log('button');
+        })
+        $('#closeMobileMenu').click(function () {
+            $("#mobileMenu").removeClass("mobile-menu--active");
+            console.log('button');
         })
 
-        const menuIcon = document.querySelector('.ham');
-        const hammenu__navbar = document.querySelector('.ham');
 
-        menuIcon.addEventListener('click', () = > {
-            hammenu__navbar.classList.toggle("change");
-    })
-        ;
 
 
     });
